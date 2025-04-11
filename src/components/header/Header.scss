@@ -3,45 +3,115 @@
     justify-content: space-between;
     width: auto;
     max-height: 400px;
-
+    padding: 10px 0;
+  
     &__logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-
-        &-icon {
-            width: 57px;
-            height: 57px;
-        }
-
-        &-text {
-            object-fit: contain;
-            width: 144px;
-            height: 34px;
-        }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-right: 10px;
+  
+      &-icon {
+        width: 24px;
+        height: 24px;
+      }
+  
+      &-text {
+        object-fit: contain;
+        width: 41px;
+        height: 15px;
+      }
     }
-
+  
     &__nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-    
-        &-item {
-            list-style-type: none;
-    
-            &-link {
-                text-decoration: none;
-                color: black;
-    
-                &-button {
-                    width: 239px;
-                    height: 68px;
-    
-                    border-radius: 10px;
-                }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  
+      &-item {
+        list-style-type: none;
+  
+        &-link {
+          text-decoration: none;
+          color: black;
+
+          &-text {
+            font-size: 10px;
             }
+  
+          &-button {
+            border-radius: 10px;
+            font-size: 10px;
+          }
         }
+      }
     }
-}
+  }
+  
+  @media (min-width: 768px) {
+    .header {
+      &__logo {
+        &-icon {
+          width: 39px;
+          height: 39px;
+        }
+  
+        &-text {
+          width: 99px;
+          height: 20px;
+        }
+      }
+  
+      &__nav {
+        gap: 20px;
+        &-item {
+          &-link {
+            &-text {
+                font-size: 14px;
+            }
+            &-button {
+              width: 161px;
+              height: 54px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .header {
+      &__logo {
+        &-icon {
+          width: 57px;
+          height: 57px;
+        }
+  
+        &-text {
+          width: 144px;
+          height: 34px;
+        }
+      }
+  
+      &__nav {
+        gap: 40px;
+
+        &-item {
+          &-link {
+            &-text {
+                font-size: 18px;
+            }
+            &-button {
+              width: 239px;
+              height: 68px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  

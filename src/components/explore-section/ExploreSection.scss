@@ -1,72 +1,230 @@
-.exploreSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    margin: 80px 0 80px 0;
-
-    &__exploreElements {
+@media (min-width: 320px) {
+    .exploreSection {
         display: flex;
         flex-direction: column;
-        gap: 40px;
-
-        &-first {
+        justify-content: center;
+        align-items: center;
+    
+        margin: 80px 0 80px 0;
+    
+        &__exploreElements {
             display: flex;
-            gap: 40px;
-        }
-
-        &-second {
-            display: flex;        
-            gap: 40px;
-        }
-
-        &-third {
-            display: flex;
-            gap: 40px;
-        }
-
-        &-card {
-            display: flex;
-            justify-content: space-between;
-            padding: 40px;
-            box-sizing: border-box;
-            border: 2px solid black;
-
-            width: 400px;
-            height: 250px;
-
-            border-radius: 40px;
-
-            &-1part {
+            flex-direction: column;
+            gap: 20px;
+            overflow: hidden; 
+    
+            &-first,
+            &-second,
+            &-third {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-
-                &-text {
-                    white-space: normal;
-                    word-wrap: break-word;
-                }
-
-                &-arrow {
-                    width: 50px;
-                    height: 50px;
-                }
+                gap: 20px;
             }
+    
+            &-card {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                box-sizing: border-box;
+                border: 2px solid black;
+    
+                width: 260px;
+                height: 162px;
+    
+                border-radius: 20px;
 
-            &-2part {
-                &-img {
-                    width: 160px;
-                    height: 134px;
-                    object-fit: contain;
+                &.--orange {
+                    background-color: #FF7D45;
+                }
+
+                &.--black {
+                    background-color: #191A23;
+                }
+
+                &.--white {
+                    background-color: #FFFFFF;
+                }
+    
+                &-1part {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+    
+                    &-text {
+                        white-space: normal;
+                        word-wrap: break-word;
+
+                        &.--white {
+                            color: #FFFFFF;
+                        }
+                    }
+    
+                    &-arrow {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+    
+                &-2part {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &-img {
+                        width: 137px;
+                        height: 69px;
+                        object-fit: contain;
+                    }
                 }
             }
         }
     }
+    
+    .heading {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
 }
 
-.heading {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+@media (min-width: 768px) {
+    .exploreSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        margin: 80px 0 80px 0;
+    
+        &__exploreElements {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            overflow: hidden; 
+    
+            &-first,
+            &-second,
+            &-third {
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+            }
+    
+            &-card {
+                display: flex;
+                justify-content: space-between;
+                padding: 40px;
+                box-sizing: border-box;
+                border: 2px solid black;
+    
+                width: 330px;
+                height: 192px;
+    
+                border-radius: 30px;
+    
+                &-1part {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+    
+                    &-text {
+                        white-space: normal;
+                        word-wrap: break-word;
+                    }
+    
+                    &-arrow {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+    
+                &-2part {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &-img {
+                        width: 191px;
+                        height: 107px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+    
+    .heading {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .exploreSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        margin: 80px 0 80px 0;
+    
+        &__exploreElements {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            overflow: hidden;
+    
+            &-first,
+            &-second,
+            &-third {
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+            }
+    
+            &-card {
+                display: flex;
+                justify-content: space-between;
+                padding: 40px;
+                box-sizing: border-box;
+                border: 2px solid black;
+    
+                width: 400px;
+                height: 250px;
+    
+                border-radius: 40px;
+    
+                &-1part {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+    
+                    &-text {
+                        white-space: normal;
+                        word-wrap: break-word;
+                    }
+    
+                    &-arrow {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+    
+                &-2part {
+                    &-img {
+                        width: 160px;
+                        height: 134px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+    
+    .heading {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
 }

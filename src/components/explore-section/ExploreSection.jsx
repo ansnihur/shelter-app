@@ -44,7 +44,7 @@ const ExploreSection = () => {
                     <div className="exploreSection__exploreElements-second">
                         <div className="exploreSection__exploreElements-card --black">
                             <div className="exploreSection__exploreElements-card-1part">
-                                <h3 className="exploreSection__exploreElements-card-1part-text">Прилаштувати <br></br>тваринку</h3>
+                                <h3 className="exploreSection__exploreElements-card-1part-text --white">Прилаштувати <br></br>тваринку</h3>
                                 <a href="/" className="exploreSection__exploreElements-card-1part-link-arrow">
                                     <img src={arrow} className="exploreSection__exploreElements-card-1part-arrow" alt="Arrow" />
                                 </a>
@@ -79,7 +79,7 @@ const ExploreSection = () => {
                         </div>
                         <div className="exploreSection__exploreElements-card --black">
                             <div className="exploreSection__exploreElements-card-1part">
-                                <h3 className="exploreSection__exploreElements-card-1part-text">Історії <br></br>улюбленців</h3>
+                                <h3 className="exploreSection__exploreElements-card-1part-text --white">Історії <br></br>улюбленців</h3>
                                 <a href="/" className="exploreSection__exploreElements-card-1part-link-arrow">
                                     <img src={arrow} className="exploreSection__exploreElements-card-1part-arrow" alt="Arrow" />
                                 </a>

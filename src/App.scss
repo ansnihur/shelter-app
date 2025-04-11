@@ -1,3 +1,26 @@
 #root {
     margin: 0 100px;
 }
+
+@media (min-width: 320px) {
+    #root {
+        margin: 0 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    #root {
+        margin: 0 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #root {
+        margin: 0 100px;
+    }
+}
+
+body {
+    background: linear-gradient(90deg, #FFE986, #FFAD4E);
+    height: 100vh;
+}
