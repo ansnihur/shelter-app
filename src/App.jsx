@@ -5,7 +5,7 @@ import HomePage from './pages/homepage/homepage';
 
 function App() {
   return (
-    <div>
+    <div className='app-container'>
       <HomePage/>
 
       <Routes>
