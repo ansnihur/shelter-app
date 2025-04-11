@@ -10,7 +10,7 @@ import explore6 from '../../assets/images/explore6.png'
 
 const ExploreSection = () => {
     return (
-        <div>
+        <div className="explore">
             <div className="heading">
                 <h2 className="heading-text">Досліджуй</h2>
                 <h4 className="heading-descripton">На нашому сайті будь-хто може знайти спосіб допомогти тваринкам.</h4>
