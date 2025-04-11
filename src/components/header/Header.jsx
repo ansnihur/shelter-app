@@ -6,49 +6,35 @@ import './Header.scss'
 const Header = () => {
     return (
         <header className="header">
-            <div className="logo">
-               <img src={logo} className="logo-icon" alt="logo" />
-               <img src={logoText} className="logo-text" alt="logo-text" />
+            <div className="header__logo">
+               <img src={logo} className="header__logo-icon" alt="logo" />
+               <img src={logoText} className="header__logo-text" alt="logo-text" />
             </div>
-            <nav className="nav">
-                <li className="nav-item">
-                    <a href="/" className="nav-item-link">
-                        <p className="nav-item-link-text">
-                           Забрати додому 
-                        </p>
-                    </a>
-                </li>
-                <li className="nav-item">
-                    <a href="/" className="nav-item-link">
-                        <p className="nav-item-link-text">
-                           Забрати додому 
-                        </p>
-                    </a>
-                </li>
-                <li className="nav-item">
-                    <a href="/" className="nav-item-link">
-                        <p className="nav-item-link-text">
+            <nav className="header__nav">
+                <li className="header__nav-item">
+                    <a href="/" className="header__nav-item-link">
+                        <p className="header__nav-item-link-text">
                            Притулкам 
                         </p>
                     </a>
                 </li>
-                <li className="nav-item">
-                    <a href="/" className="nav-item-link">
-                        <p className="nav-item-link-text">
+                <li className="header__nav-item">
+                    <a href="/" className="header__nav-item-link">
+                        <p className="header__nav-item-link-text">
                            Волонтерам 
                         </p>
                     </a>
                 </li>
-                <li className="nav-item">
-                    <a href="/" className="nav-item-link">
-                        <p className="nav-item-link-text">
+                <li className="header__nav-item">
+                    <a href="/" className="header__nav-item-link">
+                        <p className="header__nav-item-link-text">
                            Блог
                         </p>
                     </a>
                 </li>
-                <li className="nav-item">
-                    <a href="/" className="nav-item-link">
-                        <button className="nav-item-link-button">
+                <li className="header__nav-item">
+                    <a href="/" className="header__nav-item-link">
+                        <button className="header__nav-item-link-button">
                            Вхід / Реєстрація
                         </button>
                     </a>

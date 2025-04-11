@@ -3,44 +3,44 @@
     justify-content: space-between;
     width: auto;
     max-height: 400px;
-}
 
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
 
-    &-icon {
-        width: 57px;
-        height: 57px;
+        &-icon {
+            width: 57px;
+            height: 57px;
+        }
+
+        &-text {
+            object-fit: contain;
+            width: 144px;
+            height: 34px;
+        }
     }
 
-    &-text {
-        object-fit: contain;
-        width: 144px;
-        height: 34px;
-    }
-}
-
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-
-    &-item {
-        list-style-type: none;
-
-        &-link {
-            text-decoration: none;
-            color: black;
-
-            &-button {
-                width: 239px;
-                height: 68px;
-
-                border-radius: 10px;
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    
+        &-item {
+            list-style-type: none;
+    
+            &-link {
+                text-decoration: none;
+                color: black;
+    
+                &-button {
+                    width: 239px;
+                    height: 68px;
+    
+                    border-radius: 10px;
+                }
             }
         }
     }
