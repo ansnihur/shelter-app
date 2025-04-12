@@ -29,13 +29,13 @@ const Contact = () => {
 
             <div className="contact__form-wrapper">
                 <form className="contact__form" onSubmit={handleSubmit}>
-                    <label htmlFor="name" className="form__label">Ім’я</label>
+                    <label htmlFor="name" className="form__label">Ім’я*</label>
                     <input type="text" id="name" name="name" className="form__input" placeholder="Ім’я*" required />
 
-                    <label htmlFor="email" className="form__label">Email</label>
+                    <label htmlFor="email" className="form__label">Email*</label>
                     <input type="email" id="email" name="email" className="form__input" placeholder="Email" required />
 
-                    <label htmlFor="message" className="form__label">Повідомлення</label>
+                    <label htmlFor="message" className="form__label">Повідомлення*</label>
                     <textarea id="message" name="message" className="form__textarea" placeholder="Повідомлення" required />
 
                     <button type="submit" className="form__link-button">Зв’язатися зі мною</button>

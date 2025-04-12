@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 80px 0;
+  margin: 40px 0;
 
   &__exploreElements {
     display: flex;
@@ -124,8 +124,7 @@
         gap: 30px;
   
         &-first,
-        &-second,
-        &-third {
+        &-second {
           flex-direction: row;
           gap: 40px;
         }

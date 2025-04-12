@@ -42,39 +42,15 @@ const ExploreSection = () => {
                         </div>
                     </div>
                     <div className="exploreSection__exploreElements-second">
-                        <div className="exploreSection__exploreElements-card --black">
+                        <div className="exploreSection__exploreElements-card --orange">
                             <div className="exploreSection__exploreElements-card-1part">
-                                <h3 className="exploreSection__exploreElements-card-1part-text --white">Прилаштувати <br></br>тваринку</h3>
+                                <h3 className="exploreSection__exploreElements-card-1part-text">Прилаштувати <br></br>тваринку</h3>
                                 <a href="/" className="exploreSection__exploreElements-card-1part-link-arrow">
                                     <img src={arrow} className="exploreSection__exploreElements-card-1part-arrow" alt="Arrow" />
                                 </a>
                             </div>
                             <div className="exploreSection__exploreElements-card-2part">
                                 <img src={explore3} className="exploreSection__exploreElements-card-2part-img" alt="3card" />
-                            </div>
-                        </div>
-                        <div className="exploreSection__exploreElements-card --white">
-                            <div className="exploreSection__exploreElements-card-1part">
-                                <h3 className="exploreSection__exploreElements-card-1part-text">Блог</h3>
-                                <a href="/" className="exploreSection__exploreElements-card-1part-link-arrow">
-                                    <img src={arrow} className="exploreSection__exploreElements-card-1part-arrow" alt="Arrow" />
-                                </a>
-                            </div>
-                            <div className="exploreSection__exploreElements-card-2part">
-                                <img src={explore4} className="exploreSection__exploreElements-card-2part-img" alt="4card" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="exploreSection__exploreElements-third">
-                        <div className="exploreSection__exploreElements-card --orange">
-                            <div className="exploreSection__exploreElements-card-1part">
-                                <h3 className="exploreSection__exploreElements-card-1part-text">Розіграші</h3>
-                                <a href="/" className="exploreSection__exploreElements-card-1part-link-arrow">
-                                    <img src={arrow} className="exploreSection__exploreElements-card-1part-arrow" alt="Arrow" />
-                                </a>
-                            </div>
-                            <div className="exploreSection__exploreElements-card-2part">
-                                <img src={explore5} className="exploreSection__exploreElements-card-2part-img" alt="5card" />
                             </div>
                         </div>
                         <div className="exploreSection__exploreElements-card --black">
