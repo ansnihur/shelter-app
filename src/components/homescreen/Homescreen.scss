@@ -1,71 +1,83 @@
+@use '@/styles/abstracts/index' as *;
+
 .homescreen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 500px;
+
+  &-text {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-height: 500px;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 700px;
+
+    &-button {
+      @extend .button-text !optional;
+      width: 151px;
+      height: 44px;
+      border-radius: 10px;
+      background: $black;
+      color: $white;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      @include hover(transform, scale(1.03));
+
+      &:active {
+        background: $orange;
+      }
+    }
+  }
+
+  &-image {
+    &-png {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+  }
+}
+
+// === TABLET STYLES ===
+@include on-tablet {
+  .homescreen {
+    gap: 50px;
 
     &-text {
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
-        max-width: 700px;
-        font-size: 10px; /* Default font size */
-
-        &-button {
-            width: 111px;
-            height: 34px;
-            border-radius: 10px;
-        }
+      &-button {
+        font-size: 16px;
+        width: 201px;
+        height: 54px;
+      }
     }
 
     &-image {
-        &-png {
-            width: 50px; /* Default size */
-            height: 50px;
-        }
+      &-png {
+        width: 200px;
+        height: 200px;
+      }
     }
+  }
 }
 
-@media (min-width: 768px) {
-    .homescreen {
-        gap: 50px;
-
-        &-text {
-            font-size: 14px;
-
-            &-button {
-                width: 201px;
-                height: 54px;
-                border-radius: 10px;
-            }
-        }
-
-        &-image {
-            &-png {
-                width: 200px;
-                height: 200px;
-            }
-        }
+// === DESKTOP STYLES ===
+@include on-desktop {
+  .homescreen {
+    &-text {
+      &-button {
+        font-size: 18px;
+        width: 231px;
+        height: 68px;
+      }
     }
-}
 
-@media (min-width: 1024px) {
-    .homescreen {
-        &-text {
-            font-size: 16px;
-
-            &-button {
-                width: 231px;
-                height: 68px;
-                border-radius: 10px;
-            }
-        }
-
-        &-image {
-            &-png {
-                width: 480px;
-                height: 480px;
-            }
-        }
+    &-image {
+      &-png {
+        width: 480px;
+        height: 480px;
+      }
     }
+  }
 }

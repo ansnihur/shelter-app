@@ -1,117 +1,136 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  max-height: 400px;
+  padding: 20px 0;
+
+  &__logo {
     display: flex;
-    justify-content: space-between;
-    width: auto;
-    max-height: 400px;
-    padding: 10px 0;
-  
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    &-text {
+      object-fit: contain;
+      width: 41px;
+      height: 15px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    &-item {
+      list-style-type: none;
+
+      &-link {
+        text-decoration: none;
+        color: $black;
+
+        // mobile default
+        &-text {
+          @extend %h6-mobile !optional;
+
+          transition: all 0.3s ease;
+
+          @include hover(transform, scale(1.03));
+
+          &:active {
+            color: $white;
+          }
+        }
+
+        &-button {
+          @extend %button-text-mobile !optional;
+        
+          border-radius: 10px;
+          border: 2px solid $black;
+          background: none;
+          width: auto;
+          transition: transform 0.3s ease, border-color 0.3s ease;
+        
+          @include hover(transform, scale(1.03));
+        
+          &:active {
+            border-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// === TABLET STYLES ===
+@include on-tablet {
+  .header__nav-item-link-text {
+    font-size: 14px; // замість @extend
+    line-height: 17.5px;
+  }
+
+  .header__nav-item-link-button {
+    font-size: 14px;
+    line-height: 16px;
+    width: 161px;
+    height: 54px;
+  }
+
+  .header {
     &__logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      margin-right: 10px;
-  
       &-icon {
-        width: 24px;
-        height: 24px;
+        width: 39px;
+        height: 39px;
       }
-  
+
       &-text {
-        object-fit: contain;
-        width: 41px;
-        height: 15px;
+        width: 99px;
+        height: 20px;
       }
     }
-  
+
     &__nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-  
-      &-item {
-        list-style-type: none;
-  
-        &-link {
-          text-decoration: none;
-          color: black;
+      gap: 20px;
+    }
+  }
+}
 
-          &-text {
-            font-size: 10px;
-            }
-  
-          &-button {
-            border-radius: 10px;
-            font-size: 10px;
-          }
-        }
-      }
-    }
+// === DESKTOP STYLES ===
+@include on-desktop {
+  .header__nav-item-link-text {
+    font-size: 18px;
+    line-height: 17.5px;
   }
-  
-  @media (min-width: 768px) {
-    .header {
-      &__logo {
-        &-icon {
-          width: 39px;
-          height: 39px;
-        }
-  
-        &-text {
-          width: 99px;
-          height: 20px;
-        }
-      }
-  
-      &__nav {
-        gap: 20px;
-        &-item {
-          &-link {
-            &-text {
-                font-size: 14px;
-            }
-            &-button {
-              width: 161px;
-              height: 54px;
-              font-size: 14px;
-            }
-          }
-        }
-      }
-    }
-  }
-  
-  @media (min-width: 1280px) {
-    .header {
-      &__logo {
-        &-icon {
-          width: 57px;
-          height: 57px;
-        }
-  
-        &-text {
-          width: 144px;
-          height: 34px;
-        }
-      }
-  
-      &__nav {
-        gap: 40px;
 
-        &-item {
-          &-link {
-            &-text {
-                font-size: 18px;
-            }
-            &-button {
-              width: 239px;
-              height: 68px;
-              font-size: 18px;
-            }
-          }
-        }
+  .header__nav-item-link-button {
+    font-size: 18px;
+    width: 239px;
+    height: 68px;
+  }
+
+  .header {
+    &__logo {
+      &-icon {
+        width: 57px;
+        height: 57px;
+      }
+
+      &-text {
+        width: 144px;
+        height: 34px;
       }
     }
+
+    &__nav {
+      gap: 40px;
+    }
   }
-  
+}

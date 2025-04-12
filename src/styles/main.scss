@@ -1,0 +1,11 @@
+@use './abstracts/index' as *;
+
+body {
+  margin: 0;
+  font-family: 'KyivTypeSans', sans-serif;
+}
+
+button {
+    font-family: inherit;
+  }
+  

@@ -1,0 +1,50 @@
+@use '../utils/mixins' as *;
+
+// ===== MOBILE DEFAULTS =====
+
+h1    { @extend %h1-mobile !optional; }
+h2    { @extend %h2-mobile !optional; }
+h3    { @extend %h3-mobile !optional; }
+h4    { @extend %h4-mobile !optional; }
+h5    { @extend %h5-mobile !optional; }
+h6    { @extend %h6-mobile !optional; }
+p     { @extend %p-mobile !optional; }
+span  { @extend %span-mobile !optional; }
+
+.button-text {
+  @extend %button-text-mobile !optional;
+}
+
+// ===== TABLET OVERRIDES =====
+
+@include on-tablet {
+  h1    { @extend %h1-tablet !optional; }
+  h2    { @extend %h2-tablet !optional; }
+  h3    { @extend %h3-tablet !optional; }
+  h4    { @extend %h4-tablet !optional; }
+  h5    { @extend %h5-tablet !optional; }
+  h6    { @extend %h6-tablet !optional; }
+  p     { @extend %p-tablet !optional; }
+  span  { @extend %span-tablet !optional; }
+
+  .button-text {
+    @extend %button-text-tablet !optional;
+  }
+}
+
+// ===== DESKTOP OVERRIDES =====
+
+@include on-desktop {
+  h1    { @extend %h1-desktop !optional; }
+  h2    { @extend %h2-desktop !optional; }
+  h3    { @extend %h3-desktop !optional; }
+  h4    { @extend %h4-desktop !optional; }
+  h5    { @extend %h5-desktop !optional; }
+  h6    { @extend %h6-desktop !optional; }
+  p     { @extend %p-desktop !optional; }
+  span  { @extend %span-desktop !optional; }
+
+  .button-text {
+    @extend %button-text-desktop !optional;
+  }
+}
