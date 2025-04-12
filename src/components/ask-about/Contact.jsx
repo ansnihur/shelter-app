@@ -30,7 +30,7 @@ const Contact = () => {
             <div className="contact__form-wrapper">
                 <form className="contact__form" onSubmit={handleSubmit}>
                     <label htmlFor="name" className="form__label">Ім’я*</label>
-                    <input type="text" id="name" name="name" className="form__input" placeholder="Ім’я*" required />
+                    <input type="text" id="name" name="name" className="form__input" placeholder="Ім’я" required />
 
                     <label htmlFor="email" className="form__label">Email*</label>
                     <input type="email" id="email" name="email" className="form__input" placeholder="Email" required />

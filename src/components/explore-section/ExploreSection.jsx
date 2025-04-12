@@ -4,9 +4,8 @@ import arrow from '../../assets/icons/arrow.png'
 import explore1 from '../../assets/images/explore1.png'
 import explore2 from '../../assets/images/explore2.png'
 import explore3 from '../../assets/images/explore3.png'
-import explore4 from '../../assets/images/explore4.png'
-import explore5 from '../../assets/images/explore5.png'
 import explore6 from '../../assets/images/explore6.png'
+import { Link } from "react-router-dom";
 
 const ExploreSection = () => {
     return (
@@ -21,7 +20,7 @@ const ExploreSection = () => {
                         <div className="exploreSection__exploreElements-card --white">
                             <div className="exploreSection__exploreElements-card-1part">
                                 <h3 className="exploreSection__exploreElements-card-1part-text">Задонатити</h3>
-                                <a href="/" className="exploreSection__exploreElements-card-1part-link-arrow">
+                                <a href="https://send.monobank.ua/jar/82Y3he789M" target="_blank" className="exploreSection__exploreElements-card-1part-link-arrow">
                                     <img src={arrow} className="exploreSection__exploreElements-card-1part-arrow" alt="Arrow" />
                                     </a>
                                 </div>
@@ -32,9 +31,9 @@ const ExploreSection = () => {
                         <div className="exploreSection__exploreElements-card --orange">
                             <div className="exploreSection__exploreElements-card-1part">
                                 <h3 className="exploreSection__exploreElements-card-1part-text">Забрати <br></br>тваринку</h3>
-                                <a href="/" className="exploreSection__exploreElements-card-1part-link-arrow">
+                                <Link to="/animalpage" className="exploreSection__exploreElements-card-1part-link-arrow">
                                     <img src={arrow} className="exploreSection__exploreElements-card-1part-arrow" alt="Arrow" />
-                                </a>
+                                </Link>
                             </div>
                             <div className="exploreSection__exploreElements-card-2part">
                                 <img src={explore2} className="exploreSection__exploreElements-card-2part-img" alt="2card" />
@@ -45,9 +44,9 @@ const ExploreSection = () => {
                         <div className="exploreSection__exploreElements-card --orange">
                             <div className="exploreSection__exploreElements-card-1part">
                                 <h3 className="exploreSection__exploreElements-card-1part-text">Прилаштувати <br></br>тваринку</h3>
-                                <a href="/" className="exploreSection__exploreElements-card-1part-link-arrow">
+                                <Link to="/petregister" className="exploreSection__exploreElements-card-1part-link-arrow">
                                     <img src={arrow} className="exploreSection__exploreElements-card-1part-arrow" alt="Arrow" />
-                                </a>
+                                </Link>
                             </div>
                             <div className="exploreSection__exploreElements-card-2part">
                                 <img src={explore3} className="exploreSection__exploreElements-card-2part-img" alt="3card" />

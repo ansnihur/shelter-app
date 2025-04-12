@@ -38,6 +38,10 @@
       border-radius: 20px;
       box-sizing: border-box;
 
+      transition: all 0.3s ease;
+
+      @include hover(transform, scale(0.95));
+
       &.--orange {
         background-color: $orange;
       }

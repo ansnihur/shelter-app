@@ -1,0 +1,54 @@
+@use 'sass:color';
+
+.pet-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  
+    @include on-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 4rem 0;
+    }
+  
+    &__left {
+      max-width: 500px;
+      font-family: 'KyivTypeSans', sans-serif;
+      font-size: 18px;
+      line-height: 28px;
+  
+      .highlight {
+        background-color: $orange;
+        padding: 0 0.3rem;
+        font-weight: bold;
+      }
+    }
+  
+    &__right {
+      background-color: $gray;
+      padding: 1rem 2rem;
+      border-radius: 20px;
+      text-align: center;
+  
+      p {
+        margin-bottom: 1rem;
+        font-family: 'KyivTypeSans', sans-serif;
+      }
+  
+      &__btn,
+      .pet-form__btn {
+        background-color: $black;
+        color: $white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+        font-family: 'KyivTypeSans', sans-serif;
+        font-size: 14px;
+        text-decoration: none;
+        display: inline-block;
+  
+        @include hover(background-color, color.adjust($black, $lightness: 10%));
+      }
+    }
+  }
+  

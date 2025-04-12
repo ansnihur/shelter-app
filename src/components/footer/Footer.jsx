@@ -4,6 +4,11 @@ import logo from '../../assets/icons/logo-light.svg';
 import logoText from '../../assets/images/logo-text-light.png';
 
 const Footer = () => {
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    alert("🎉 Дякуємо за підписку! Шукай листи з оновленнями про хвостиків у себе на пошті 🐾📬");
+  };
+
   return (
     <footer className="footer">
       <div className="footer__content">
@@ -14,10 +19,9 @@ const Footer = () => {
             </a>
 
           <nav className="footer__nav">
-            <a href="#">Притулкам</a>
-            <a href="#">Волонтерам</a>
-            <a href="#">Блог</a>
-            <a href="#" className="footer__button-outline">Вхід / Реєстрація</a>
+            <a href="/petregister">Притулкам</a>
+            <a href="/animalpage">Волонтерам</a>
+            <a href="/registration" className="footer__button-outline">Вхід / Реєстрація</a>
           </nav>
 
           <div className="footer__contact">
@@ -29,7 +33,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__right">
-          <form className="footer__subscribe">
+          <form className="footer__subscribe" onSubmit={handleSubscribe}>
             <input
               type="email"
               placeholder="Email"

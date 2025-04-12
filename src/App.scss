@@ -20,6 +20,18 @@
     }
 }
 
+@media (min-width: 1400px) {
+    #root {
+        margin: 0 150px;
+    }
+}
+
+@media (min-width: 2000px) {
+    #root {
+        margin: 0 600px;
+    }
+}
+
 body {
     background: $background;
     height: 100vh;

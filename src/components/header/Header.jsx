@@ -14,13 +14,13 @@ const Header = () => {
 
       <nav className="header__nav">
         <li className="header__nav-item">
-          <Link to="/" className="header__nav-item-link">
+          <Link to="/petregister" className="header__nav-item-link">
             <p className="header__nav-item-link-text">Притулкам</p>
           </Link>
         </li>
 
         <li className="header__nav-item">
-          <Link to="/" className="header__nav-item-link">
+          <Link to="/animalpage" className="header__nav-item-link">
             <p className="header__nav-item-link-text">Волонтерам</p>
           </Link>
         </li>

@@ -1,0 +1,142 @@
+@use 'sass:color';
+
+.find-pet {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 350px;
+
+  @include on-tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include on-desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .pet-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+  }
+
+  .pet-card {
+    background: #fff3d1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    .pet-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+
+      @include on-tablet {
+        height: 180px;
+      }
+
+      @include on-desktop {
+        height: 180px;
+      }
+    }
+
+    .pet-footer {
+      @include flex-between;
+      padding: 0.75rem 1rem;
+      background: $orange;
+      color: $white;
+      font-weight: bold;
+
+      span {
+        font-size: 14px;
+      }
+
+      .like-button {
+        background: transparent;
+        border: none;
+        color: $white;
+        font-size: 1.3rem;
+        cursor: pointer;
+        z-index: 5;
+
+        &.liked {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .pet-popup {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    transition: all 0.3s ease;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    animation: fadeSlide 0.3s ease forwards;
+    box-sizing: border-box;
+    z-index: 10;
+
+    &.visible {
+      display: flex;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    .pet-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-top: 1rem;
+
+      button {
+        flex: 1;
+        padding: 0.5rem;
+        background: $black;
+        color: $white;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        cursor: pointer;
+
+        &:hover {
+          background: color.adjust($black, $lightness: 10%);
+        }
+      }
+    }
+  }
+
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

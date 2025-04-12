@@ -2,9 +2,11 @@ import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/homepage/HomePage';
 import Registration from './pages/registration/Registration';
-import LoginPage from './pages/loginpage/LoginPage';
 import Header from './components/header/Header';
 import { useLocation } from 'react-router-dom';
+import LoginPage from './pages/loginpage/Loginpage';
+import PetRegisterPage from './pages/petregister/PetRegisterPage';
+import AnimalPage from './pages/animalpage/AnimalPage';
 
 function App() {
   const location = useLocation();
@@ -19,7 +21,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/registration" element={<Registration />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/petregister" element={<PetRegisterPage/>} />
+        <Route path="/animalpage" element={<AnimalPage/>} />
         {/* <Route path="/cabinet" element={<CabinetHeader />} /> ← або інша логіка */}
       </Routes>
     </div>
