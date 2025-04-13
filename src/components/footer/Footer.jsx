@@ -23,8 +23,8 @@ const Footer = () => {
           </a>
 
           <nav className="footer__nav">
-            <a href="/petregister">Притулкам</a>
-            <a href="/animalpage">Волонтерам</a>
+            <Link to="/petregister">Притулкам</Link>
+            <Link to="/animalpage">Волонтерам</Link>
             {user ? (
               <>
                 <Link
