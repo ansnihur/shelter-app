@@ -16,7 +16,7 @@ The complete UI/UX design is available in  Figma
 
 Live Demo
 
-[View the demo site](#)
+[View the demo site](https://tailhub-psi.vercel.app/)
 
 Project Team
 
