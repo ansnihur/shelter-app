@@ -13,7 +13,7 @@ import Logout from "./components/auth/Logout";
 // Pages
 import HomePage from "./pages/homepage/Homepage";
 import Registration from "./pages/registration/Registration";
-import LoginPage from "./pages/loginpage/Loginpage";
+import LoginPage from "./pages/loginpage/LoginPage";
 import PetRegisterPage from "./pages/petregister/PetRegisterPage";
 import AnimalPage from "./pages/animalpage/AnimalPage";
 import PetStoriesPage from "./pages/petstories/PetStoriesPage";
