@@ -55,9 +55,9 @@ const ExploreSection = () => {
                         <div className="exploreSection__exploreElements-card --black">
                             <div className="exploreSection__exploreElements-card-1part">
                                 <h3 className="exploreSection__exploreElements-card-1part-text --white">Історії <br></br>улюбленців</h3>
-                                <a href="/" className="exploreSection__exploreElements-card-1part-link-arrow">
+                                <Link to="/petstories" className="exploreSection__exploreElements-card-1part-link-arrow">
                                     <img src={arrow} className="exploreSection__exploreElements-card-1part-arrow" alt="Arrow" />
-                                </a>
+                                </Link>
                             </div>
                             <div className="exploreSection__exploreElements-card-2part">
                                 <img src={explore6} className="exploreSection__exploreElements-card-2part-img" alt="6card" />

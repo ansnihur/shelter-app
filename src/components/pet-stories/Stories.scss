@@ -1,0 +1,87 @@
+@use 'sass:color';
+
+.pet-stories {
+  padding: 3rem 1.5rem;
+  color: $white;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .pet-stories__title {
+      background-color: $orange;
+      color: $black;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .pet-stories__subtitle {
+      font-size: 1rem;
+      color: $black;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+
+    @include on-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include on-desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.story-card {
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    @include on-tablet {
+      height: 220px;
+    }
+
+    @include on-desktop {
+      height: 240px;
+    }
+  }
+
+  &__text {
+    padding: 1.5rem;
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    &__link,
+    .story-card__link {
+      color: $orange;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: color.adjust($orange, $lightness: -10%);
+      }
+    }
+  }
+}

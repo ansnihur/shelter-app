@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './AnimalPage.scss';
 import PetForm from '../../components/animal-page/PetForm';
 import SearchFilter from '../../components/animal-page/SearchFilter';
 import FindPet from '../../components/animal-page/FindPet';
