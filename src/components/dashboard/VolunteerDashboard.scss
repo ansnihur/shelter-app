@@ -1,0 +1,182 @@
+.dashboard {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+
+  @include on-mobile {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    button {
+      padding: 0.6rem 1rem;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &.active {
+        background: #ff8147;
+        color: #000;
+      }
+    }
+
+    @include on-mobile {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    background: #fffbe6;
+    border-radius: 12px;
+    padding: 1.5rem;
+
+    @include on-mobile {
+      padding: 1rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    .profile-info p,
+    .favorites-list li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .find-pet {
+      margin-top: 1rem;
+
+      .pet-card {
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        transition: transform 0.3s ease;
+    
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+    
+        .pet-info {
+          padding: 1rem;
+    
+          h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+          }
+    
+          p {
+            font-size: 0.9rem;
+            color: #444;
+          }
+        }
+    
+        .pet-actions {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.75rem 0.5rem;
+    
+          button {
+            flex: 1;
+            padding: 0.4rem 0.5rem;
+            font-size: 10px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+            white-space: nowrap;
+    
+            &.btn-call {
+              background-color: #ff8147;
+              color: #fff;
+              margin-right: 0.5rem;
+    
+              &:hover {
+                background-color: darken(#ff8147, 10%);
+              }
+            }
+    
+            &.btn-remove {
+              background-color: #111;
+              color: #fff;
+    
+              &:hover {
+                background-color: lighten(#111, 10%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.requests-list {
+  margin-top: 1rem;
+
+  .request-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .request-actions {
+      display: flex;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+
+      button {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+
+        &.btn-edit {
+          background-color: #ff8147;
+          color: white;
+        }
+
+        &.btn-remove {
+          background-color: #111;
+          color: white;
+        }
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+
+

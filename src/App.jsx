@@ -12,12 +12,14 @@ import PetStoriesPage from './pages/petstories/PetStoriesPage';
 import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import Logout from "./components/auth/Logout";
+import VolunteerDashboard from "./components/dashboard/VolunteerDashboard";
+import ShelterDashboard from "./components/dashboard/ShelterDashboard";
+import Contact from "./components/ask-about/Contact";
 
 function App() {
   const location = useLocation();
 
-  // Список маршрутів, де Header не показується або замінюється іншим
   const hideHeaderRoutes = ['/cabinet']; // або ['/login', '/register'] залежно від потреб
 
   useEffect(() => {
@@ -36,6 +38,10 @@ function App() {
         <Route path="/petregister" element={<PetRegisterPage/>} />
         <Route path="/animalpage" element={<AnimalPage/>} />
         <Route path="/petstories" element={<PetStoriesPage/>} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/volunteer-dashboard" element={<VolunteerDashboard />} />
+        <Route path="/shelter-dashboard" element={<ShelterDashboard />} />
+        <Route path="/contact" element={<Contact />} />
         {/* <Route path="/cabinet" element={<CabinetHeader />} /> ← або інша логіка */}
       </Routes>
     </div>

@@ -17,7 +17,7 @@ export default function SearchFilter({ searchQuery, setSearchQuery, activeFilter
           <img src={search} alt="search" className="search-icon" />
           <input
             type="text"
-            placeholder="Пошук..."
+            placeholder="Пошук по імені..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="search-filter__input"
@@ -31,7 +31,7 @@ export default function SearchFilter({ searchQuery, setSearchQuery, activeFilter
 
           {filtersOpen && (
             <div className="filter-dropdown">
-              <button className={activeFilter === "" ? "active" : ""} onClick={() => setActiveFilter("")}>Скинути фільтр</button>
+              <button className={activeFilter === "" ? "active" : ""} onClick={() => setActiveFilter("")}><b>Скинути фільтр</b></button>
               <button className={activeFilter === "Вид" ? "active" : ""} onClick={() => setActiveFilter("Вид")}>Вид</button>
               <button className={activeFilter === "Вік" ? "active" : ""} onClick={() => setActiveFilter("Вік")}>Вік</button>
               <button className={activeFilter === "Стан здоров’я" ? "active" : ""} onClick={() => setActiveFilter("Стан здоров’я")}>Стан здоров’я</button>

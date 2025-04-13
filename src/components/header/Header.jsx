@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useUser } from "../../context/UserContext";
 import logo from '../../assets/icons/logo.svg';
 import logoText from '../../assets/images/logo-text.png';
-import './Header.scss'
+import './Header.scss';
 
 const Header = () => {
+  const { user } = useUser();
+
   return (
     <header className="header">
       <Link to="/" className="header__logo">
@@ -26,11 +29,23 @@ const Header = () => {
         </li>
 
         <li className="header__nav-item">
-          <Link to="/registration" className="header__nav-item-link">
-            <button className="header__nav-item-link-button">
-              Вхід / Реєстрація
-            </button>
-          </Link>
+          {user ? (
+            <>
+              <Link
+                to={user.role === "shelter" ? "/shelter-dashboard" : "/volunteer-dashboard"}
+                className="header__nav-item-link"
+              >
+                <button className="header__nav-item-link-button">Профіль</button>
+              </Link>
+              <Link to="/logout" className="header__nav-item-link">
+                <button className="header__nav-item-link-button">Вийти</button>
+              </Link>
+            </>
+          ) : (
+            <Link to="/registration" className="header__nav-item-link">
+              <button className="header__nav-item-link-button">Вхід / Реєстрація</button>
+            </Link>
+          )}
         </li>
       </nav>
     </header>

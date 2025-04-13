@@ -175,3 +175,13 @@
     @include hover(background-color, color.adjust($orange, $lightness: -5%));
   }
 }
+
+.--profile {
+  color: white;
+  cursor: pointer;
+  line-height: 22px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

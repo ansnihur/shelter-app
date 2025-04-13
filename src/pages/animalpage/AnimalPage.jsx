@@ -10,7 +10,6 @@ const AnimalPage = () => {
 
   return (
     <div className="animal-page">
-      <PetForm />
       <SearchFilter
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -18,6 +17,7 @@ const AnimalPage = () => {
         setActiveFilter={setActiveFilter}
       />
       <FindPet searchQuery={searchQuery} activeFilter={activeFilter} />
+      <PetForm />
       <Footer />
     </div>
   );
